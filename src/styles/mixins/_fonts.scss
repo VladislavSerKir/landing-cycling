@@ -1,0 +1,23 @@
+@mixin inter-regular {
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+@mixin inter-medium {
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 500;
+    margin: 0;
+}
+
+@mixin inter-semibold {
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 600;
+    margin: 0;
+}
+
+@mixin inter-bold {
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 700;
+    margin: 0;
+}

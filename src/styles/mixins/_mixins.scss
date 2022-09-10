@@ -1,0 +1,13 @@
+@mixin flex($align: stretch, $content: space-between) {
+    display: flex;
+    align-items: $align;
+    justify-content: $content;
+}
+
+@mixin background-image($url, $cover: cover) {
+    background-image: url($url);
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: $cover;
+}

@@ -1,0 +1,10 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/font.css);
+@import '../variables/color';
+@import '../variables/media';
+
+@import '../styles/mixins/mixins';
+@import '../styles/mixins/fonts';
+@import '../styles/mixins/adaptivity';
+
+@import '../blocks/page/page';

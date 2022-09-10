@@ -1,0 +1,11 @@
+@mixin adaptivity($resolution) {
+    @media screen and (max-width: $resolution) {
+        @content
+    }
+}
+
+@mixin adaptivity-min ($resolution-min) {
+    @media screen and (max-width: $resolution-min) {
+        @content
+    }
+}

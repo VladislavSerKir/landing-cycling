@@ -1,0 +1,7 @@
+.page {
+    background-color: aquamarine;
+}
+
+.title {
+    @include inter-bold;
+}
