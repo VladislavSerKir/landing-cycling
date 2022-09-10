@@ -1,0 +1,42 @@
+.button {
+    background-color: $buttonStart;
+    border-radius: 4px;
+    border: none;
+    @include inter-semibold;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: $white;
+    cursor: pointer;
+    width: 180px;
+    height: 50px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        background: $buttonEnd;
+        position: absolute;
+        z-index: -1;
+        padding: 0.85em 0.75em;
+        display: block;
+    }
+
+    &::after {
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        right: 100%;
+        transition: all 0.5s;
+    }
+
+    &:hover::after {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transition: all 0.35s;
+    }
+}

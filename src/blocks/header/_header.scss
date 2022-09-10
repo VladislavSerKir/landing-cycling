@@ -1,0 +1,27 @@
+.header {
+    background-color: $lightBackground;
+    padding: 28px 120px;
+    position: static;
+
+    &__links {
+        @include flex(center, right);
+        margin: 0;
+        padding: 0;
+        gap: 34px;
+        list-style-type: none;
+    }
+
+    &__link {
+        @include inter-medium;
+        color: $lightTextMain;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 18px;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 0.75;
+            transition: 0.3s;
+        }
+    }
+}
