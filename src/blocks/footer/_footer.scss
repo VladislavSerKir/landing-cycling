@@ -1,0 +1,116 @@
+.footer {
+    padding: 80px 120px 60px;
+    background-color: $lightSecondaryBackground;
+    transition: all 0.5s;
+
+    @include adaptivity(900px) {
+        padding: 60px 60px 30px;
+    }
+
+    @include adaptivity(500px) {
+        padding: 60px 18px 30px;
+    }
+
+    &_theme_dark {
+        background-color: $darkSecondaryBackground;
+        transition: all 0.5s;
+    }
+
+    &__text {
+        @include inter-semibold;
+        font-size: 24px;
+        line-height: 32px;
+        color: $lightTextMain;
+        max-width: 230px;
+    }
+
+    &__group {
+        @include flex(center);
+    }
+
+    &__button {
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        transition: all 0.5s;
+    }
+
+    &__copyright {
+        @include inter-semibold;
+        font-size: 14px;
+        line-height: 20px;
+        color: $lightTextCopyright;
+
+        &_theme_dark {
+            color: $darkTextCopyright;
+        }
+    }
+
+
+    &__form {
+        @include flex(center);
+        background-color: inherit;
+        border: 1px solid $formBorder;
+        border-radius: 4px;
+        height: 50px;
+        max-width: 320px;
+        padding: 0 20px;
+        margin: 50px 0 100px;
+
+        @include adaptivity(500px) {
+            max-width: 100%;
+        }
+    }
+
+    &__input-button,
+    &__input-email,
+    &__input-email::placeholder {
+        @include inter-medium;
+        font-size: 13px;
+        line-height: 28px;
+        background-color: inherit;
+    }
+
+    &__input-email {
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        color: $lightTextSecondary;
+    }
+
+    &__form:active,
+    &__form:focus {
+        opacity: 0.5;
+
+    }
+
+    &__input-email:active,
+    &__input-email:focus {
+        outline: none;
+        cursor: pointer;
+    }
+
+    &__input-email:active::placeholder,
+    &__input-email:focus::placeholder {
+        color: transparent;
+    }
+
+    &__input-email::placeholder,
+    &__input-email::placeholder {
+        color: $lightTextSecondary;
+    }
+
+    &__input-email::placeholder:hover,
+    &__input-email::placeholder:hover {
+        color: $lightTextMain;
+    }
+
+    &__input-button {
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        padding: 0 0 0 60px;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+}

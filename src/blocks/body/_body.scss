@@ -1,3 +1,9 @@
 .body {
     background-color: $lightBackground;
+    transition: all 0.5s;
+
+    &_theme_dark {
+        background-color: $darkBackground;
+        transition: all 0.5s;
+    }
 }

@@ -1,7 +1,79 @@
 .header {
+    padding: 0 120px;
     background-color: $lightBackground;
-    padding: 28px 120px;
-    position: static;
+    transition: all 0.5s;
+
+    &_sticky {
+        position: sticky;
+        // height: 74px;
+        top: 0;
+        z-index: 100;
+    }
+
+    &_theme_dark {
+        background-color: $darkBackground;
+        transition: all 0.5s;
+    }
+
+    @include adaptivity(900px) {
+        padding: 0 60px;
+    }
+
+    @include adaptivity(500px) {
+        padding: 0 18px;
+    }
+
+    &__container {
+        min-height: 74px;
+        @include flex(center);
+        justify-content: flex-end;
+        position: sticky;
+    }
+
+    &__burger-menu {
+        @include flex(center, space-between);
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        padding-bottom: 30px;
+    }
+
+    &__bar {
+        display: none;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        position: absolute;
+        // right: 60px;
+        cursor: pointer;
+
+        &_invisible {
+            display: none;
+        }
+
+        @include adaptivity-min(652px) {
+            display: block;
+        }
+
+    }
+
+    &__close-button {
+        display: none;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        position: absolute;
+        // right: 60px;
+        cursor: pointer;
+
+        // @include adaptivity-min(654px) {
+        //     right: 20px;
+        // }
+    }
+
+    &__close-button_visible {
+        @include flex(center, flex-end)
+    }
 
     &__links {
         @include flex(center, right);
@@ -9,6 +81,18 @@
         padding: 0;
         gap: 34px;
         list-style-type: none;
+
+        @include adaptivity(652px) {
+            display: none;
+            gap: 32px;
+        }
+    }
+
+    &__links_unfolded {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding-bottom: 378px;
     }
 
     &__link {
@@ -24,4 +108,8 @@
             transition: 0.3s;
         }
     }
+}
+
+.wrapper {
+    z-index: 100;
 }

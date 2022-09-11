@@ -1,11 +1,23 @@
 .training {
     padding: 150px 120px 120px;
 
+    @include adaptivity(900px) {
+        padding: 80px 60px 120px;
+    }
+
+    @include adaptivity(500px) {
+        padding: 40px 18px 60px;
+    }
 
     &__container {
         display: grid;
         grid-template-rows: min-content 1fr 1fr;
         grid-template-columns: 1fr minmax(280px, min-content);
+
+        @include adaptivity(1300px) {
+            grid-template-rows: min-content min-content min-content min-content;
+            grid-template-columns: 1fr;
+        }
     }
 
     &-item:nth-child(1) {
@@ -13,6 +25,10 @@
         grid-row-end: 1;
         grid-column-start: 1;
         grid-column-end: 1;
+
+        @include adaptivity(1300px) {
+            padding-bottom: 40px;
+        }
     }
 
     &-item:nth-child(2) {
@@ -20,6 +36,17 @@
         grid-row-end: 4;
         grid-column-start: 2;
         grid-column-end: 2;
+
+        @include adaptivity(1300px) {
+            grid-row-start: 2;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
+
+        @include adaptivity(700px) {
+            width: 100%;
+        }
     }
 
     &-item:nth-child(3) {
@@ -28,6 +55,12 @@
         grid-column-start: 1;
         grid-column-end: 1;
         margin-top: 50px;
+
+        @include adaptivity(1300px) {
+            grid-row-start: 3;
+            grid-row-end: 3;
+            padding-bottom: 40px;
+        }
     }
 
     &-item:nth-child(4) {
@@ -35,7 +68,12 @@
         grid-row-end: 3;
         grid-column-start: 1;
         grid-column-end: 1;
-        align-self: end
+        align-self: end;
+
+        @include adaptivity(1300px) {
+            grid-row-start: 4;
+            grid-row-end: 4;
+        }
     }
 
     &__title {
@@ -44,6 +82,11 @@
         line-height: 60px;
         letter-spacing: -0.5px;
         color: $lightTextMain;
+
+        @include adaptivity(900px) {
+            border-top: 1px solid $borderTop;
+            padding-top: 40px
+        }
     }
 
     &__description {

@@ -1,11 +1,26 @@
 .description {
     padding: 120px 120px 60px;
 
+    @include adaptivity(900px) {
+        padding: 60px;
+    }
+
+    @include adaptivity(500px) {
+        padding: 40px 18px;
+    }
+
     &__container {
         display: grid;
         grid-template-rows: 1fr 1fr;
-        grid-template-columns: minmax(280px, min-content) 1fr;
+        grid-template-columns: min-content 1fr;
         column-gap: 80px;
+        border-top: 1px solid $borderTop;
+        padding-top: 20px;
+
+        @include adaptivity(1300px) {
+            grid-template-rows: 1fr min-content min-content;
+            grid-template-columns: 1fr;
+        }
     }
 
     &-item:nth-child(1) {
@@ -14,6 +29,14 @@
         grid-column-start: 2;
         grid-column-end: 2;
         justify-self: start;
+
+        @include adaptivity(1300px) {
+            grid-row-start: 2;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 1;
+            padding: 40px 0;
+        }
     }
 
     &-item:nth-child(2) {
@@ -23,6 +46,14 @@
         grid-column-end: 1;
         justify-self: start;
 
+        @include adaptivity(1300px) {
+            grid-row-start: 1;
+            grid-row-end: 1;
+        }
+
+        @include adaptivity(770px) {
+            width: 100%;
+        }
     }
 
     &-item:nth-child(3) {
@@ -31,7 +62,14 @@
         grid-column-start: 2;
         grid-column-end: 2;
         justify-self: start;
-        align-self: end
+        align-self: end;
+
+        @include adaptivity(1300px) {
+            grid-row-start: 3;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
     }
 
     &__title {

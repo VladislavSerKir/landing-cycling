@@ -1,11 +1,13 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/font.css);
 @import '../variables/color';
+@import '../styles/themes';
 @import '../variables/media';
 
 @import '../styles/mixins/mixins';
 @import '../styles/mixins/fonts';
 @import '../styles/mixins/adaptivity';
+
 
 @import '../blocks/body/body';
 @import '../blocks/page/page';
@@ -13,5 +15,15 @@
 @import '../blocks/introduction/introduction';
 @import '../blocks/button/button';
 @import '../blocks/description/description';
-
+@import '../blocks/tracks/tracks';
+@import '../blocks/bikes/bikes';
 @import '../blocks/training/training';
+@import '../blocks/footer/footer';
+
+.theme-text-general-white {
+    color: $darkTextMain;
+}
+
+.theme-text-secondary {
+    color: $darkTextSecondary;
+}

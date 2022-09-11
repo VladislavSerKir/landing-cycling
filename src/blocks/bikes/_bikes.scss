@@ -1,0 +1,101 @@
+.bikes {
+    padding: 60px 120px;
+
+    @include adaptivity(900px) {
+        padding: 60px 60px;
+    }
+
+    @include adaptivity(500px) {
+        padding: 0 18px;
+    }
+
+    &__title-container {
+        @include flex(center, space-between);
+        margin-bottom: 120px;
+
+        @include adaptivity(900px) {
+            border-top: 1px solid $borderTop;
+        }
+
+        @include adaptivity(770px) {
+            flex-direction: column;
+        }
+
+        @include adaptivity(500px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__container {
+        @include flex(center, space-between);
+        gap: 40px;
+        list-style: none;
+
+        @include adaptivity(770px) {
+            padding: 0;
+        }
+    }
+
+    &__images-container {
+        @include flex(center, center);
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    &__bike-inner {
+        width: 380px;
+        height: 380px;
+        display: flex;
+        align-items: center;
+        background-color: $lightBackground;
+        border-radius: 20px;
+        filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+    }
+
+    &__bike-image {
+        margin: 0 auto;
+    }
+
+    &__bike-text {
+        @include inter-semibold;
+        font-size: 18px;
+        line-height: 22px;
+        color: $lightTextMain;
+        margin-top: 20px;
+    }
+
+    &__title {
+        @include inter-bold;
+        font-size: 55px;
+        line-height: 60px;
+        letter-spacing: -0.5px;
+        color: $lightTextMain;
+
+        @include adaptivity(900px) {
+            // border-top: 1px solid $borderTop;
+            padding-top: 40px
+        }
+    }
+
+    &__button {
+        border: none;
+        background-color: transparent;
+        @include inter-regular;
+        font-size: 18px;
+        line-height: 28px;
+        opacity: 0.7;
+        color: $lightTextSecondary;
+
+        &:hover,
+        :active {
+            opacity: 1;
+            @include inter-semibold;
+            color: $lightTextMain;
+            cursor: pointer;
+        }
+    }
+
+    &__buttons-bikes {
+        padding-top: 40px
+    }
+}
