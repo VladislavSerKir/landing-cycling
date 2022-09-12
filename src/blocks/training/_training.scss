@@ -85,7 +85,12 @@
 
         @include adaptivity(900px) {
             border-top: 1px solid $borderTop;
-            padding-top: 40px
+            padding-top: 40px;
+        }
+
+        @include adaptivity(500px) {
+            font-size: 32px;
+            line-height: 40px;
         }
     }
 
@@ -96,6 +101,11 @@
         opacity: 0.7;
         color: $lightTextSecondary;
         max-width: 460px;
+
+        @include adaptivity(500px) {
+            font-size: 12px;
+            line-height: 18px;
+        }
     }
 
     &__text {
@@ -103,6 +113,11 @@
         font-size: 18px;
         line-height: 28px;
         color: $lightTextMain;
+
+        @include adaptivity(500px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
 
     &__group {

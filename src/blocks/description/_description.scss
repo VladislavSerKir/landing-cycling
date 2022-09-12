@@ -78,6 +78,11 @@
         line-height: 44px;
         letter-spacing: -0.5px;
         color: $lightTextMain;
+
+        @include adaptivity(500px) {
+            font-size: 23px;
+            line-height: 29px;
+        }
     }
 
     &__author {
@@ -85,6 +90,11 @@
         font-size: 20px;
         line-height: 32px;
         color: $lightTextMain;
+
+        @include adaptivity(500px) {
+            font-size: 14px;
+            line-height: 22px;
+        }
     }
 
     &__profession {
@@ -93,5 +103,10 @@
         line-height: 28px;
         color: $lightTextSecondary;
         opacity: 0.7;
+
+        @include adaptivity(500px) {
+            font-size: 10px;
+            line-height: 16px;
+        }
     }
 }

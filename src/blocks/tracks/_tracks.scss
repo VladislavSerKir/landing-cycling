@@ -47,6 +47,10 @@
             grid-column-start: 1;
             grid-column-end: 3;
         }
+
+        @include adaptivity(500px) {
+            padding: 20px 0 40px;
+        }
     }
 
     &-item:nth-child(3) {
@@ -103,6 +107,10 @@
     &__buttons {
         @include flex(center, flex-start);
         gap: 20px;
+
+        @include adaptivity(500px) {
+            gap: 10px;
+        }
     }
 
 
@@ -117,6 +125,11 @@
             padding-top: 40px;
             padding-bottom: 40px;
         }
+
+        @include adaptivity(500px) {
+            font-size: 32px;
+            line-height: 40px;
+        }
     }
 
     &__description {
@@ -130,6 +143,11 @@
         @include adaptivity(900px) {
             max-width: 100%;
         }
+
+        @include adaptivity(500px) {
+            font-size: 12px;
+            line-height: 18px;
+        }
     }
 
     &__switcher {
@@ -142,6 +160,22 @@
             opacity: 0.6;
             cursor: pointer;
             transition: all 0.3s;
+        }
+    }
+}
+
+.track-switcher {
+    &-left {
+        @include adaptivity(500px) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &-right {
+        @include adaptivity(500px) {
+            width: 24px;
+            height: 24px;
         }
     }
 }

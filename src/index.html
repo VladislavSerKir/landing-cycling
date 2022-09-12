@@ -124,10 +124,10 @@
                     <img alt="Перый трек" class="tracks__first-image tracks-item">
                     <img alt="Второй трек" class="tracks__second-image tracks-item">
                     <div class="tracks__buttons tracks-item">
-                        <button type="button" class="tracks__switcher">
+                        <button type="button" class="tracks__switcher" id="left">
                             <img class="track-switcher-left" alt="Назад">
                         </button>
-                        <button type="button" class="tracks__switcher">
+                        <button type="button" class="tracks__switcher" id="right">
                             <img class="track-switcher-right" alt="Вперед">
                         </button>
                     </div>
@@ -140,13 +140,15 @@
                     <nav class="bikes__buttons-bikes">
                         <ul class="bikes__container">
                             <li class="bikes__item">
-                                <button class="bikes__button theme-text-toggler-secondary">Шоссе</button>
+                                <button class="bikes__button theme-text-toggler-secondary" name="track"
+                                    id="track">Шоссе</button>
                             </li>
                             <li class="bikes__item">
-                                <button class="bikes__button theme-text-toggler-secondary">Грэвел</button>
+                                <button class="bikes__button theme-text-toggler-secondary" name="gravel"
+                                    id="gravel">Грэвел</button>
                             </li>
                             <li class="bikes__item">
-                                <button class="bikes__button theme-text-toggler-secondary">TT</button>
+                                <button class="bikes__button theme-text-toggler-secondary" name="TT" id="TT">TT</button>
                             </li>
                         </ul>
                     </nav>
@@ -157,19 +159,20 @@
                         <div class="bikes__bike-inner">
                             <img alt="Первый велосипед" class="bikes__bike-image first-bike">
                         </div>
-                        <p class="bikes__bike-text theme-text-toggler-general">Cervelo Caledonia-5</p>
+                        <p class="bikes__bike-text theme-text-toggler-general first-bike-text">Cervelo Caledonia-5</p>
                     </div>
                     <div class="bikes__bike">
                         <div class="bikes__bike-inner">
                             <img alt="Второй велосипед" class="bikes__bike-image second-bike">
                         </div>
-                        <p class="bikes__bike-text theme-text-toggler-general">Cannondale Systemsix Himod</p>
+                        <p class="bikes__bike-text theme-text-toggler-general second-bike-text">Cannondale Systemsix
+                            Himod</p>
                     </div>
                     <div class="bikes__bike">
                         <div class="bikes__bike-inner">
                             <img alt="Третий велосипед" class="bikes__bike-image third-bike">
                         </div>
-                        <p class="bikes__bike-text theme-text-toggler-general">Trek Domane SL-7</p>
+                        <p class="bikes__bike-text theme-text-toggler-general third-bike-text">Trek Domane SL-7</p>
                     </div>
                 </div>
 

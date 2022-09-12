@@ -25,6 +25,10 @@
             grid-template-rows: min-content min-content min-content min-content;
             grid-template-columns: 1fr;
         }
+
+        @include adaptivity(500px) {
+            grid-template-rows: 1fr min-content min-content min-content;
+        }
     }
 
     &-item:nth-child(1) {
@@ -93,7 +97,15 @@
         letter-spacing: -0.5px;
         max-width: 460px;
         padding: 60px 0 50px;
-        height: 120px
+        height: 120px;
+
+        @include adaptivity(500px) {
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.5px;
+            padding: 40px 0;
+            height: auto;
+        }
     }
 
     &__description {
@@ -103,6 +115,11 @@
         opacity: 0.7;
         color: $lightTextSecondary ;
         max-width: 460px;
+
+        @include adaptivity(500px) {
+            font-size: 12px;
+            line-height: 18px;
+        }
     }
 
     &__text {

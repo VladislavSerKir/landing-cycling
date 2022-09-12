@@ -15,6 +15,10 @@
     z-index: 1;
     overflow: hidden;
 
+    @include adaptivity(500px) {
+        width: auto;
+    }
+
     &::after {
         content: "";
         background: $buttonEnd;

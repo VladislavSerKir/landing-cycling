@@ -4,6 +4,7 @@ import '../components/validate';
 import '../components/theme-switcher';
 import '../components/track-switcher';
 import '../components/menu';
+import '../components/constants';
 
 import introductionImage from '../images/introduction-image.jpg';
 import introductionBike from '../images/bike-fix.png';
