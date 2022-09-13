@@ -5,7 +5,6 @@
 
     &_sticky {
         position: sticky;
-        // height: 74px;
         top: 0;
         z-index: 100;
     }
@@ -35,7 +34,6 @@
         flex-direction: column;
         align-items: center;
         margin: 0 auto;
-        // padding-bottom: 30px;
         padding: 70px 0 30px;
     }
 
@@ -45,7 +43,6 @@
         border: none;
         padding: 0;
         position: absolute;
-        // right: 60px;
         cursor: pointer;
 
         &_invisible {
@@ -64,12 +61,7 @@
         border: none;
         padding: 0;
         position: absolute;
-        // right: 60px;
         cursor: pointer;
-
-        // @include adaptivity-min(654px) {
-        //     right: 20px;
-        // }
     }
 
     &__close-button_visible {

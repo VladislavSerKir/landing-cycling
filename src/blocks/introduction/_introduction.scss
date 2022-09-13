@@ -17,7 +17,6 @@
 
     &__container {
         display: grid;
-        // grid-template-rows: min-content min-content min-content min-content;
         grid-template-rows: 1fr min-content 1fr max-content;
         grid-template-columns: 1fr min-content;
 
@@ -53,6 +52,11 @@
             grid-column-start: 1;
             grid-column-end: 1;
             justify-self: start;
+        }
+
+        @include adaptivity(500px) {
+            width: calc(100% - 30px);
+            justify-self: end;
         }
     }
 
@@ -164,13 +168,22 @@
         }
 
         @include adaptivity(730px) {
-            right: 50px;
+            left: -30px;
+            width: 70%;
+            height: 35%;
+            bottom: 37px;
+            top: auto;
         }
     }
 
     &__bike-image {
         margin: 0 auto;
         max-height: 260px;
+
+        @include adaptivity(730px) {
+            width: calc(100% - 60px);
+            height: auto;
+        }
     }
 
     &__image {

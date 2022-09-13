@@ -3,21 +3,17 @@ export { lightTrackSwitcherLeft, lightTrackSwitcherRight, darkTrackSwitcherLeft,
 
 export const tracksElement = document.querySelector('.tracks');
 export const bikesElement = document.querySelector('.bikes');
-
 export const trackButton = bikesElement.querySelector('#track');
 export const gravelButton = bikesElement.querySelector('#gravel');
 export const ttButton = bikesElement.querySelector('#TT');
-
 export const leftSwitcher = tracksElement.querySelector('.track-switcher-left');
 const leftSwitcherButton = tracksElement.querySelector('#left');
 export const rightSwitcher = tracksElement.querySelector('.track-switcher-right');
 const rightSwitcherButton = tracksElement.querySelector('#right');
-
 const tracksTitle = tracksElement.querySelector('.tracks__title');
 const tracksDescription = tracksElement.querySelector('.tracks__description');
 const tracksFirstImage = tracksElement.querySelector('.tracks__first-image');
 const tracksSecondImage = tracksElement.querySelector('.tracks__second-image');
-
 const bikesFirstImage = bikesElement.querySelector('.first-bike');
 const bikesFirstText = bikesElement.querySelector('.first-bike-text');
 const bikesSecondImage = bikesElement.querySelector('.second-bike');
@@ -37,13 +33,10 @@ let current = 0;
 
 [trackButton, gravelButton, ttButton].forEach((button) => {
     button.addEventListener('click', (event) => {
-
         tracksData.forEach(item => {
             if (Object.keys(item)[0] === event.target.id) {
                 current = tracksData.indexOf(item);
-                console.log(item)
                 changeContent(item[event.target.id]);
-                console.log(current)
             }
         })
     })
@@ -72,6 +65,5 @@ function changeContent(data) {
             current > 2 ? current = 0 : null;
         }
         changeContent(tracksData[current][Object.keys(tracksData[current])[0]]);
-        console.log(current)
     })
 })

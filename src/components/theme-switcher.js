@@ -7,7 +7,6 @@ const footerElement = body.querySelector('.footer');
 const headerElement = body.querySelector('.header');
 const footerCopyright = footerElement.querySelector('.footer__copyright');
 const switcherButton = body.querySelectorAll('.theme-switcher');
-
 const themeTextTogglerGeneral = Array.from(body.querySelectorAll('.theme-text-toggler-general'));
 const themeTextTogglerSecondary = Array.from(body.querySelectorAll('.theme-text-toggler-secondary'));
 const themeSwitcherImageBlock = body.querySelectorAll('.footer__button-image');
@@ -19,7 +18,6 @@ themeSwitcherImageBlock.forEach(item => {
 switcherButton.forEach(item => {
     item.addEventListener('click', changeTheme);
 })
-
 
 function changeTheme(event) {
     if (Array.from(event.target.classList).includes('theme-switcher')) {
@@ -55,11 +53,9 @@ function changeTheme(event) {
         });
         leftSwitcher.src = lightTrackSwitcherLeft;
         rightSwitcher.src = lightTrackSwitcherRight;
-
         body.classList.toggle('body_theme_dark');
         headerElement.classList.toggle('header_theme_dark');
         footerElement.classList.toggle('footer_theme_dark');
         footerCopyright.classList.toggle('.footer__copyright_theme_dark');
     }
-    // console.log(themeSwitcherImageBlock.src)
 }

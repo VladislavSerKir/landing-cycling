@@ -24,6 +24,8 @@ import tracksTTBike1 from '../images/tracks-tt-bike-1.png';
 import tracksTTBike2 from '../images/tracks-tt-bike-2.png';
 import tracksTTBike3 from '../images/tracks-tt-bike-3.png';
 
+//Объект по которому рендеримся
+
 const tracksData = [{
     track: {
         title: 'Шоссе',
@@ -97,7 +99,5 @@ const tracksData = [{
     }
 }
 ];
-
-console.log(Object.keys(tracksData[0]))
 
 export { tracksTrack1, tracksTrack2, tracksGravel1, tracksGravel2, tracksTT1, tracksTT2, tracksTrackBike1, tracksTrackBike2, tracksTrackBike3, tracksGravelBike1, tracksGravelBike2, tracksGravelBike3, tracksTTBike1, tracksTTBike2, tracksTTBike3, lightTrackSwitcherLeft, lightTrackSwitcherRight, darkTrackSwitcherLeft, darkTrackSwitcherRight, tracksData }
