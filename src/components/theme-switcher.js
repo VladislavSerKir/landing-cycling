@@ -10,6 +10,7 @@ const switcherButton = body.querySelectorAll('.theme-switcher');
 const themeTextTogglerGeneral = Array.from(body.querySelectorAll('.theme-text-toggler-general'));
 const themeTextTogglerSecondary = Array.from(body.querySelectorAll('.theme-text-toggler-secondary'));
 const themeSwitcherImageBlock = body.querySelectorAll('.footer__button-image');
+
 themeSwitcherImageBlock.forEach(item => {
     item.src = lightThemeSwitcherImage;
     item.classList.add('theme-switcher');

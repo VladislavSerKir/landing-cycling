@@ -20,6 +20,8 @@ const bikesSecondImage = bikesElement.querySelector('.second-bike');
 const bikesSecondText = bikesElement.querySelector('.second-bike-text');
 const bikesThirdImage = bikesElement.querySelector('.third-bike');
 const bikesThirdText = bikesElement.querySelector('.third-bike-text');
+const bikesForm = bikesElement.querySelector('.bikes__form');
+const bikesSelect = bikesElement.querySelectorAll('.bikes__select');
 
 leftSwitcher.src = lightTrackSwitcherLeft;
 rightSwitcher.src = lightTrackSwitcherRight;
@@ -37,8 +39,18 @@ let current = 0;
             if (Object.keys(item)[0] === event.target.id) {
                 current = tracksData.indexOf(item);
                 changeContent(item[event.target.id]);
+                adjustSelect(Object.keys(tracksData[current])[0]);
             }
         })
+    })
+})
+
+bikesForm.addEventListener('change', event => {
+    tracksData.forEach(item => {
+        if (Object.keys(item)[0] === event.target.value) {
+            current = tracksData.indexOf(item);
+            changeContent(item[event.target.value]);
+        }
     })
 })
 
@@ -55,6 +67,13 @@ function changeContent(data) {
     bikesThirdText.textContent = data.bikes.thirdBike.description;
 }
 
+function adjustSelect(data) {
+    const rightOption = Array.from(bikesSelect[0].options).find(option => {
+        return option.value === data;
+    })
+    rightOption.selected = true;
+}
+
 [leftSwitcherButton, rightSwitcherButton].forEach((button) => {
     button.addEventListener('click', (event) => {
         if (event.target.classList.value === 'track-switcher-left') {
@@ -65,5 +84,12 @@ function changeContent(data) {
             current > 2 ? current = 0 : null;
         }
         changeContent(tracksData[current][Object.keys(tracksData[current])[0]]);
+        adjustSelect(Object.keys(tracksData[current])[0]);
     })
 })
+
+window.addEventListener('resize', function (event) {
+    if (event.target.innerWidth > 500) {
+        bikesForm.classList.toggle('.bikes__form_invisible');
+    }
+}, true);
