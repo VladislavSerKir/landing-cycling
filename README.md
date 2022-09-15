@@ -10,7 +10,7 @@
 </p>
 
 ## Установка, настройка
-Проект, развернутый на Github:  [https://vladislavserkir.github.io/landing-photography/](https://vladislavserkir.github.io/landing-cycling/)
+Проект, развернутый на Github:  [https://vladislavserkir.github.io/landing-cycling/](https://vladislavserkir.github.io/landing-cycling/)
 - Установка зависимостей: `npm install`
 - Режим разработки: `npm run dev`
 - Сформировать проект для последующего размещения на ресурсах: `npm run build`
