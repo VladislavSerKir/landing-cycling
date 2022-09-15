@@ -46,7 +46,6 @@
         }
     }
 
-
     &__form {
         @include flex(center);
         background-color: inherit;
@@ -76,33 +75,25 @@
         padding: 0;
         cursor: pointer;
         color: $lightTextSecondary;
-    }
-
-    &__form:active,
-    &__form:focus {
-        opacity: 0.5;
-
-    }
-
-    &__input-email:active,
-    &__input-email:focus {
         outline: none;
-        cursor: pointer;
-    }
 
-    &__input-email:active::placeholder,
-    &__input-email:focus::placeholder {
-        color: transparent;
-    }
+        &:active,
+        :focus {
+            outline: none;
+            cursor: pointer;
+        }
 
-    &__input-email::placeholder,
-    &__input-email::placeholder {
-        color: $lightTextSecondary;
-    }
+        &::placeholder {
+            opacity: 0.7;
 
-    &__input-email::placeholder:hover,
-    &__input-email::placeholder:hover {
-        color: $lightTextMain;
+            &:hover {
+                color: $lightTextMain;
+            }
+        }
+
+        &_theme_dark::placeholder {
+            color: $white;
+        }
     }
 
     &__input-button {

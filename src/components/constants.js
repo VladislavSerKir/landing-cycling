@@ -2,6 +2,10 @@ import lightTrackSwitcherLeft from '../images/light-track-switcher-left.png';
 import lightTrackSwitcherRight from '../images/light-track-switcher-right.png';
 import darkTrackSwitcherLeft from '../images/dark-track-switcher-left.png';
 import darkTrackSwitcherRight from '../images/dark-track-switcher-right.png';
+import closeButtonLight from '../images/close-button.png';
+import closeButtonDark from '../images/close-button-dark.png';
+import headerButtonLight from '../images/menu-bar.png';
+import headerButtonDark from '../images/menu-bar-dark.png';
 
 //Изображения групп трасс
 
@@ -100,4 +104,4 @@ const tracksData = [{
 }
 ];
 
-export { tracksTrack1, tracksTrack2, tracksGravel1, tracksGravel2, tracksTT1, tracksTT2, tracksTrackBike1, tracksTrackBike2, tracksTrackBike3, tracksGravelBike1, tracksGravelBike2, tracksGravelBike3, tracksTTBike1, tracksTTBike2, tracksTTBike3, lightTrackSwitcherLeft, lightTrackSwitcherRight, darkTrackSwitcherLeft, darkTrackSwitcherRight, tracksData }
+export { headerButtonLight, headerButtonDark, closeButtonLight, closeButtonDark, tracksTrack1, tracksTrack2, tracksGravel1, tracksGravel2, tracksTT1, tracksTT2, tracksTrackBike1, tracksTrackBike2, tracksTrackBike3, tracksGravelBike1, tracksGravelBike2, tracksGravelBike3, tracksTTBike1, tracksTTBike2, tracksTTBike3, lightTrackSwitcherLeft, lightTrackSwitcherRight, darkTrackSwitcherLeft, darkTrackSwitcherRight, tracksData }

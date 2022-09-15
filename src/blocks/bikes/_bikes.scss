@@ -152,5 +152,11 @@
         &:focus {
             outline: none;
         }
+
+        &_theme_dark {
+            color: $darkTextSecondary;
+        }
     }
+
+
 }

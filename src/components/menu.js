@@ -39,3 +39,5 @@ window.addEventListener('resize', function (event) {
         toggleMenu();
     }
 }, true);
+
+export { headerButton }
